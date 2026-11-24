@@ -1,4 +1,4 @@
-#Quiz minimaliste sur les capitales du monde
+# Quiz minimaliste sur les capitales du monde
 
 Les capitales et pays sont ceux des pays membres de l'ONU ainsi que certains choix personnels, ce n'est pas une liste objective.
 
