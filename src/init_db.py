@@ -1,7 +1,13 @@
 import pandas as pd
 import json
+from pathlib import Path
 
 def init_db():
+    
+    path = Path("database.csv")
+    if path.is_file():
+        return
+    
     with open("src/data.json", "r", encoding="utf-8") as file:
         data = json.load(file)
     

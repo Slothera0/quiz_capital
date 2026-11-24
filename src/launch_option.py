@@ -12,16 +12,16 @@ def launch_option():
     
     option = int(input(
         "Quel mode vous voulez vous faire ?\n" +
-            "[1] Le monde, \n" +
-            "[2] L'Amérique du Nord, \n" +
-            "[3] L'Amérique du Sud, \n" +
-            "[4] L'Europe, \n" +
-            "[5] L'Asie, \n" +
-            "[6] L'Océanie, \n" +
-            "[7] L'Afrique, \n" +
-            "[8] Les pays souvent échoués, \n" +
-            "[9] Statistique \n"
-        ))
+        "   [1] Le monde\n" +
+        "   [2] L'Amérique du Nord\n" +
+        "   [3] L'Amérique du Sud\n" +
+        "   [4] L'Europe\n" +
+        "   [5] L'Asie\n" +
+        "   [6] L'Océanie\n" +
+        "   [7] L'Afrique\n" +
+        "   [8] Les pays souvent échoués\n" +
+        "   [9] Statistique\n"
+    ))
     
     match option:
         case 1:
@@ -39,12 +39,8 @@ def launch_option():
         case 7:
             return get_Africa()
         case 8:
-            print("Pas encore implémenté")
-            SystemExit(0)
+            raise Exception("fonction pas encore implémenté")
         case 9:
-            df = pd.read_csv("database.csv", sep=";")
-            print(df)
-            SystemExit(0)
+            raise Exception("fonction pas encore implémenté")
         case _:
-            print("Option invalide")
-            SystemExit(0)
+            raise Exception("Option invalide")

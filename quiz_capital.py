@@ -8,7 +8,13 @@ from src.launch_option import launch_option
 def main():
     
     init_db()
-    world = launch_option()
+    
+    try:
+        world = launch_option()
+    except Exception as error:
+        print(f"Erreur : {error}")
+        return 1
+
 
     good_answer = []
     bad_answer = []
