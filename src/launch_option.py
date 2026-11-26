@@ -6,6 +6,7 @@ from src.getter.get_South_America import get_South_America
 from src.getter.get_Asia import get_Asia
 from src.getter.get_Oceania import get_Oceania
 from src.getter.get_world import get_world
+from src.getter.get_low_winrate import get_low_winrate
 
 def launch_option():
     
@@ -39,7 +40,7 @@ def launch_option():
         case 7:
             return get_Africa()
         case 8:
-            raise Exception("fonction pas encore implémenté")
+            return get_low_winrate()
         case 9:
             raise Exception("fonction pas encore implémenté")
         case _:

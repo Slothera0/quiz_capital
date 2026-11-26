@@ -6,4 +6,5 @@ def normalize(word):
     word = "".join(c for c in word if unicodedata.category(c) != "Mn")
     word = word.replace("-", " ")
     word = word.replace(".", "")
+    word = word.strip()
     return word
