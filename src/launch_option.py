@@ -9,6 +9,7 @@ from src.getter.get_world import get_world
 from src.getter.get_low_winrate import get_low_winrate
 from src.statistic import statistic
 from src.statistic import Statistic
+from src.getter.get_ten_random import get_ten_random
 
 def launch_option():
     
@@ -24,6 +25,7 @@ def launch_option():
         "   [7] L'Afrique\n" +
         "   [8] Les pays souvent échoués\n" +
         "   [9] Statistique\n"
+        "   [10] 10 pays au hasard\n"
     ))
     
     match option:
@@ -46,5 +48,7 @@ def launch_option():
         case 9:
             statistic()
             raise Statistic()
+        case 10:
+            return get_ten_random()
         case _:
             raise Exception("Option invalide")

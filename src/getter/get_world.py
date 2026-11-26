@@ -4,4 +4,4 @@ def get_world():
     
     df = pd.read_csv("database.csv", sep=";")
     
-    return (df.loc[["country", "capital"]])
+    return (df[["country", "capital"]])
