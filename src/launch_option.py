@@ -7,6 +7,8 @@ from src.getter.get_Asia import get_Asia
 from src.getter.get_Oceania import get_Oceania
 from src.getter.get_world import get_world
 from src.getter.get_low_winrate import get_low_winrate
+from src.statistic import statistic
+from src.statistic import Statistic
 
 def launch_option():
     
@@ -42,6 +44,7 @@ def launch_option():
         case 8:
             return get_low_winrate()
         case 9:
-            raise Exception("fonction pas encore implémenté")
+            statistic()
+            raise Statistic()
         case _:
             raise Exception("Option invalide")

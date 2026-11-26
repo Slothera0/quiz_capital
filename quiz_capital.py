@@ -4,6 +4,7 @@ from src.ask_question import ask_question
 from src.init_db import init_db
 from src.update_db import update_db
 from src.launch_option import launch_option
+from src.statistic import Statistic
 
 def main():
     
@@ -11,6 +12,8 @@ def main():
     
     try:
         world = launch_option()
+    except Statistic:
+        return 0
     except Exception as error:
         print(f"Erreur : {error}")
         return 1
